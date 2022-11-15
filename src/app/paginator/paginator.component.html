@@ -1,0 +1,46 @@
+<!-- Pagination -->
+<div class="pagination-container mt-2 mb-2">
+  <label>
+    Show
+    <select name="records" id="recordsOptions" [formControl]="recordsOptions" (ngModelChange)="onPageSizeChange()">
+      <option value="30">30</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+    records
+  </label>
+  <button
+          type="button"
+          class="pagination-btn"
+          [disabled]='isFirstPage'
+          (click)="firstPage()">
+    <img src="/assets/images/icons/first_page_black_24dp.svg" alt="First" />
+  </button>
+  <button
+          type="button"
+          class="pagination-btn"
+          [disabled]='isFirstPage'
+          (click)="previousPage()">
+    <img src="/assets/images/icons/chevron_left_black_24dp.svg" alt="Previous" />
+  </button>
+  <label>
+    <input type="tel" [(ngModel)]="page" (ngModelChange)="submitPage()" min="1"
+           max="{{totalPages}}">
+    of {{page}}
+  </label>
+  <button
+          type="button"
+          class="pagination-btn"
+          [disabled]='isLastPage'
+          (click)="nextPage()">
+    <img src="/assets/images/icons/chevron_right_black_24dp.svg" alt="Next" />
+  </button>
+  <button
+          type="button"
+          class="pagination-btn"
+          [disabled]='isLastPage'
+          (click)="lastPage()">
+    <img src="/assets/images/icons/last_page_black_24dp.svg" alt="Last" />
+  </button>
+</div>
+<!-- End of pagination -->
