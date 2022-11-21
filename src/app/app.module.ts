@@ -47,6 +47,7 @@ import {PaginatorComponent} from './paginator/paginator.component';
 import {ConfigActions} from './ThemeOptions/store/config.actions';
 import {PersonDetailsComponent} from './person-details/person-details.component';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 // Widgets
 
@@ -86,7 +87,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FooterComponent,
 PaginatorComponent,
       PersonDetailsComponent,
-      HomeComponent
+      HomeComponent,
+      PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

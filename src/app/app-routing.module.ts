@@ -5,6 +5,7 @@ import {BaseLayoutComponent} from './Layout/base-layout/base-layout.component';
 
 import {PersonDetailsComponent} from './person-details/person-details.component';
 import {HomeComponent} from './home/home.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -12,11 +13,11 @@ const routes: Routes = [
     component: BaseLayoutComponent,
     children: [
       {path: '', component: HomeComponent, data: {extraParameter: 'dashboardsMenu'}},
-         { path: 'person/:name', component: PersonDetailsComponent },
+      { path: 'person/:name', component: PersonDetailsComponent },
     ]
 
   },
-  {path: '**', redirectTo: ''}
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
